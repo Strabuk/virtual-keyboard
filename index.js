@@ -1,0 +1,31 @@
+function createDom () {
+ const body = document.querySelector('body');
+ const header = document.createElement('header');
+ header.classList.add('header');
+ const nameOfTask = document.createElement('h1');
+ nameOfTask.classList.add('header__name');
+ nameOfTask.textContent = 'Virtual keybord';
+ header.append(nameOfTask);
+ body.append(header);
+ const main = document.createElement('main');
+ main.classList.add('main');
+ header.after(main);
+ const content = document.createElement('div');
+ content.classList.add('content');
+ main.append(content);
+ const textInput = document.createElement('textarea');
+ textInput.classList.add('content__text-input');
+ content.append(textInput);
+ const keyboard = document.createElement('div');
+ keyboard.classList.add('content__keyboard');
+ content.append(keyboard);
+ const keyButton = document.createElement('button');
+ keyButton.classList.add('keyboard__key-button');
+ keyButton.textContent = '1';
+ keyboard.append(keyButton);
+ const keyButton1 = document.createElement('button');
+ keyButton1.classList.add('keyboard__key-button');
+ keyButton1.textContent = '2';
+ keyboard.append(keyButton1);
+}
+createDom();
