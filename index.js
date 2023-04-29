@@ -1,3 +1,6 @@
+import keys from './keysymbol.js';
+
+
 function createDom () {
  const body = document.querySelector('body');
  const header = document.createElement('header');
@@ -19,13 +22,45 @@ function createDom () {
  const keyboard = document.createElement('div');
  keyboard.classList.add('content__keyboard');
  content.append(keyboard);
- const keyButton = document.createElement('button');
- keyButton.classList.add('keyboard__key-button');
- keyButton.textContent = '1';
- keyboard.append(keyButton);
- const keyButton1 = document.createElement('button');
- keyButton1.classList.add('keyboard__key-button');
- keyButton1.textContent = '2';
- keyboard.append(keyButton1);
 }
 createDom();
+
+const content__keyboard = document.querySelector('.content__keyboard');
+const keysArray = []
+
+function createKeys () {
+ keys.forEach((el,ind) => {
+  keysArray[ind] = document.createElement('button');
+  content__keyboard.append(keysArray[ind]);
+  keysArray[ind].classList.add('keyboard__key-button');
+  if (el.name === 'Shift1') {
+   keysArray[ind].textContent = 'Shift';
+   keysArray[ind].classList.add('keyboard__greykey');
+  }
+  else {
+  keysArray[ind].textContent = el.name;
+  }
+  if (el.name === 'Backspace' || el.name === 'Caps Lock' || el.name === 'Shift') {
+   keysArray[ind].classList.add('keyboard__3key');
+  }
+  if (el.name === 'Tab') {
+   keysArray[ind].classList.add('keyboard__12key');
+  }
+  if (el.name === 'Enter') {
+   keysArray[ind].classList.add('keyboard__2key');
+  }
+  if (el.name === 'Ctrl') {
+   keysArray[ind].classList.add('keyboard__14key');
+  }
+  if (el.name === 'space') {
+   keysArray[ind].classList.add('keyboard__7key');
+  }
+  if (el.name === 'Backspace' || el.name === 'Caps Lock'  || el.name === 'Shift' || el.name === 'Tab' || el.name === 'Del' || el.name === '`' || el.name === 'Enter' || el.name === 'win' || el.name === 'alt' || el.name === 'Del' || el.name === 'Ctrl') {
+   keysArray[ind].classList.add('keyboard__greykey');
+  }
+  if (el.name === 'arrowup' || el.name === 'arrowdown'  || el.name === 'arrowleft' || el.name === 'arrowright') {
+   keysArray[ind].classList.add('keyboard__greykey');
+  }
+ })
+}
+createKeys();
