@@ -22,6 +22,14 @@ function createDom () {
  const keyboard = document.createElement('div');
  keyboard.classList.add('content__keyboard');
  content.append(keyboard);
+ const operationSystem = document.createElement('p');
+ operationSystem.classList.add('operationSystem');
+ operationSystem.textContent = 'Operation system for this keyboard is Windows';
+ content.append(operationSystem);
+ const languageKey = document.createElement('p');
+ languageKey.classList.add('languageKey');
+ languageKey.textContent = 'Language for keyboard now is Eng';
+ content.append(languageKey);
 }
 createDom();
 
@@ -58,8 +66,21 @@ function createKeys () {
   if (el.name === 'Backspace' || el.name === 'Caps Lock'  || el.name === 'Shift' || el.name === 'Tab' || el.name === 'Del' || el.name === '`' || el.name === 'Enter' || el.name === 'win' || el.name === 'alt' || el.name === 'Del' || el.name === 'Ctrl') {
    keysArray[ind].classList.add('keyboard__greykey');
   }
-  if (el.name === 'arrowup' || el.name === 'arrowdown'  || el.name === 'arrowleft' || el.name === 'arrowright') {
-   keysArray[ind].classList.add('keyboard__greykey');
+  if (el.name === 'arrowup') {
+   keysArray[ind].classList.add('arrow__up');
+   keysArray[ind].textContent = '';
+  }
+  if (el.name === 'arrowdown') {
+   keysArray[ind].classList.add('arrow__down');
+   keysArray[ind].textContent = '';
+  }
+  if (el.name === 'arrowleft') {
+   keysArray[ind].classList.add('arrow__left');
+   keysArray[ind].textContent = '';
+  }
+  if (el.name === 'arrowright') {
+   keysArray[ind].classList.add('arrow__right');
+   keysArray[ind].textContent = '';
   }
  })
 }

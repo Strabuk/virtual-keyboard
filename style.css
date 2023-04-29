@@ -87,16 +87,38 @@ body {
 
 .arrow__up {
  background: url(assets/arrowup.svg) center/50% no-repeat;
+ background-color: gray
 }
 
 .arrow__down {
  background: url(assets/arrowdown.svg) center/50% no-repeat;
+ background-color: gray
 }
 
 .arrow__left {
  background: url(assets/arrowleft.svg) center/50% no-repeat;
+ background-color: gray
 }
 
 .arrow__right {
  background: url(assets/arrowright.svg) center/50% no-repeat;
+ background-color: gray
+}
+
+.operationSystem {
+ display: flex;
+ justify-content: center;
+ width: 90%;
+ margin: 3%;
+ font-size: 1.3rem;
+ font-weight: 400;
+}
+
+.languageKey {
+ display: flex;
+ justify-content: center;
+ width: 90%;
+ margin: 3%;
+ font-size: 1.3rem;
+ font-weight: 400;
 }
