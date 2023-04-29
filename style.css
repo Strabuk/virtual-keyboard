@@ -7,7 +7,7 @@ body {
 }
 
 .header__name {
- font-size: 3em;
+ font-size: 2em;
  width: 100%;
  text-align: center;
 }
@@ -24,7 +24,7 @@ body {
 
 .content__text-input {
  width: 100%;
- height: 15vw;
+ height: 10vw;
  box-sizing: border-box;
 }
 
@@ -32,7 +32,7 @@ body {
  width: 100%;
  box-sizing: border-box;
  display: flex;
- gap: 0.2%;
+ gap: 4px;
  justify-content: space-between;
  flex-wrap: wrap;
  border: 1px solid black;
@@ -40,12 +40,16 @@ body {
 }
 
 .keyboard__key-button {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
  width: 5rem;
  height: 5rem;
  border-radius: 8px;
  border: 1px solid black;
  text-align: center;
- font-size: 1.3rem;
+ font-size: 1.5rem;
  font-weight: 400;
 }
 
