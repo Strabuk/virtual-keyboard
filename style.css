@@ -57,6 +57,10 @@ body {
  background-color: blanchedalmond;
 }
 
+.keyboard__key-button:active {
+ background-color: rgb(202, 75, 16);
+}
+
 .keyboard__3key {
  width: 13rem;
 }
@@ -79,4 +83,20 @@ body {
 
 .keyboard__greykey {
  background-color: gray;
+}
+
+.arrow__up {
+ background: url(assets/arrowup.svg) center/50% no-repeat;
+}
+
+.arrow__down {
+ background: url(assets/arrowdown.svg) center/50% no-repeat;
+}
+
+.arrow__left {
+ background: url(assets/arrowleft.svg) center/50% no-repeat;
+}
+
+.arrow__right {
+ background: url(assets/arrowright.svg) center/50% no-repeat;
 }
