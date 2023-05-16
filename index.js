@@ -1,6 +1,7 @@
 import keys from './keysymbol.js';
 
 
+
 function createDom () {
  const body = document.querySelector('body');
  const header = document.createElement('header');
